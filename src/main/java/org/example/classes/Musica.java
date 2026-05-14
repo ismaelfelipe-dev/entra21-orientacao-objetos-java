@@ -1,8 +1,8 @@
 package org.example.classes;
 
-import org.example.interfaces.IReproduzivel;
+import org.example.interfaces.Reproduzivel;
 
-public class Musica extends Midia implements IReproduzivel {
+public class Musica extends Midia implements Reproduzivel {
 
     private String artista;
 
@@ -15,8 +15,11 @@ public class Musica extends Midia implements IReproduzivel {
         return artista;
     }
 
-    public void setArtista(String artista) {
-        this.artista = artista;
+    @Override
+    public void exibirDetalhes() {
+        super.exibirDetalhes();
+        System.out.println("Artista: " + getArtista());
+        System.out.printf("Preço: R$ %.2f%n", calcularCusto());
     }
 
     @Override

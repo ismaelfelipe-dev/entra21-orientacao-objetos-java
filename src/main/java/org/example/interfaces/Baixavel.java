@@ -1,5 +1,5 @@
 package org.example.interfaces;
 
-public interface IBaixavel {
+public interface Baixavel {
     public void realizarDownload();
 }

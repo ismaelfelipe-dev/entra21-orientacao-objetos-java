@@ -1,5 +1,5 @@
 package org.example.interfaces;
 
-public interface IReproduzivel {
+public interface Reproduzivel {
     public void darPlay();
 }

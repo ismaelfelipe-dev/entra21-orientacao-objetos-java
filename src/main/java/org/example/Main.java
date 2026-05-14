@@ -3,14 +3,11 @@ package org.example;
 import org.example.classes.ConversorTempo;
 import org.example.classes.Filme;
 import org.example.classes.Musica;
-import org.example.interfaces.IReproduzivel;
-import org.example.interfaces.IBaixavel;
+import org.example.interfaces.Reproduzivel;
+import org.example.interfaces.Baixavel;
 
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         Musica musica = new Musica(
                 "White America",
                 5,
@@ -23,16 +20,9 @@ public class Main {
                 "4K"
         );
 
+        musica.exibirDetalhes();
 
-        System.out.println(musica.getTitulo());
-        System.out.println(musica.getArtista());
-        System.out.println(musica.getDuracaoEmMinutos());
-        System.out.println(musica.calcularCusto());
-
-        System.out.println(filme.getTitulo());
-        System.out.println(filme.getQualidade());
-        System.out.println(filme.getDuracaoEmMinutos());
-        System.out.println(filme.calcularCusto());
+        filme.exibirDetalhes();
 
         System.out.println(ConversorTempo.formatarMinutos(musica.getDuracaoEmMinutos()));
         System.out.println(ConversorTempo.formatarMinutos(filme.getDuracaoEmMinutos()));
@@ -44,11 +34,11 @@ public class Main {
         download(filme);
     }
 
-    public static void processarPlayer (IReproduzivel item){
+    public static void processarPlayer (Reproduzivel item){
         item.darPlay();
     }
 
-    public static void download (IBaixavel item){
+    public static void download (Baixavel item){
         item.realizarDownload();
     }
 }

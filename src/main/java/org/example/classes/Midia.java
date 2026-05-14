@@ -27,8 +27,8 @@ public abstract class Midia {
     }
 
     public void exibirDetalhes(){
-        System.out.println(getTitulo());
-        System.out.println(getDuracaoEmMinutos());
+        System.out.println("Título: " + getTitulo());
+        System.out.println("Duração: " + getDuracaoEmMinutos() + "min");
     }
 
     public abstract double calcularCusto();
