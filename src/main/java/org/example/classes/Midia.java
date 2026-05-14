@@ -26,9 +26,9 @@ public abstract class Midia {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
-        public void exibirDetalhes(){
-        System.out.println(this.titulo);
-        System.out.println(this.duracaoEmMinutos);
+    public void exibirDetalhes(){
+        System.out.println(getTitulo());
+        System.out.println(getDuracaoEmMinutos());
     }
 
     public abstract double calcularCusto();

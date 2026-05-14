@@ -21,7 +21,7 @@ public class Musica extends Midia implements IReproduzivel {
 
     @Override
     public void darPlay() {
-        System.out.println("Dar Play");
+        System.out.println("Reproduzir musica " + getTitulo() + " do artista " + getArtista());
     }
 
     @Override
