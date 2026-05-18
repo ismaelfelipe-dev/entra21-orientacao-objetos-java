@@ -11,30 +11,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
 
-        CartaoCredito cartaoCredito = new CartaoCredito(
-                100,
-                "Cartão de Crédito"
-        );
-
-        Pix pix = new Pix(
-                100,
-                "Pix",
-                "ismael@gmail.com"
-        );
-
-        Boleto boleto = new Boleto(
-                100,
-                "Boleto"
-        );
-
         List<MeioPagamento> leia = new ArrayList<>();
 
-        leia.add(cartaoCredito);
-        leia.add(pix);
-        leia.add(boleto);
+        leia.add(new CartaoCredito());
+        leia.add(new Pix());
+        leia.add(new Boleto());
 
         for(MeioPagamento l : leia){
-            l.pagar();
+            l.pagar(100.0);
+            System.out.println();
         };
 
     }

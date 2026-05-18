@@ -1,5 +1,6 @@
 package org.example.interfaces;
 
 public interface MeioPagamento {
-    public void pagar();
+    void pagar(double valor);
+    String tipo();
 }
