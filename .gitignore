@@ -1,4 +1,8 @@
+# ItelliJ
+.idea/
+
 # Compiled class file
+.out/
 *.class
 
 # Log file
