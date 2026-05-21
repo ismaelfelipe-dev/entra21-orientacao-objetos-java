@@ -26,9 +26,26 @@ public abstract class Beneficiario  {
         return dataDeNascimento;
     }
 
-    public int idade(){
+    public int calcularIdade(){
         return Period.between(dataDeNascimento, LocalDate.now()).getYears();
     }
 
     public abstract double calcularMensalidade();
+
+    protected double calcularMensalidadeBase() {
+
+        int idade = calcularIdade();
+
+        if (idade <= 18) {
+            return 180;
+        }
+
+        if (idade <= 59) {
+            return 340;
+        }
+
+        return 620;
+    }
+
+    public abstract boolean podeSolicitarInternacao();
 }
