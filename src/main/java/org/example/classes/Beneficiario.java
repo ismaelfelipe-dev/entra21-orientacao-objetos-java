@@ -14,18 +14,6 @@ public abstract class Beneficiario  {
         this.dataDeNascimento = dataDeNascimento;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public LocalDate getDataDeNascimento() {
-        return dataDeNascimento;
-    }
-
     public int calcularIdade(){
         return Period.between(dataDeNascimento, LocalDate.now()).getYears();
     }
@@ -48,4 +36,16 @@ public abstract class Beneficiario  {
     }
 
     public abstract boolean podeSolicitarInternacao();
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
 }
